@@ -3,6 +3,8 @@
 namespace App\Http\Middleware;
 
 use App\Data\AuthenticatedUserData;
+use App\Models\Article\ArticleCategory;
+use App\Models\Article\ArticleTag;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -30,11 +32,16 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request): array
     {
+        $categoriesArticle = ArticleCategory::query()
+        ->select('id', 'name', 'slug')
+        ->get();
+        
         return [
             ...parent::share($request),
             'auth' => [
                 'user' => $request->user() ? AuthenticatedUserData::from($request->user()) : null,
             ],
+            'categoriesArticle' => $categoriesArticle,
             'ziggy' => fn () => [
                 'location' => $request->url(),
                 'query' => $request->query(),
@@ -43,6 +50,7 @@ class HandleInertiaRequests extends Middleware
                 'type' => $request->session()->get('type') ?? 'success',
                 'message' => $request->session()->get('message'),
             ],
+            
         ];
     }
 }

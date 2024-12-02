@@ -60,9 +60,9 @@ const Select = <T extends object>({
 };
 
 interface ListProps<T extends object> {
-    items?: Iterable<T>;
+    items?: any;
     placement?: Placement;
-    children: React.ReactNode | ((item: T) => React.ReactNode);
+    children: React.ReactNode | ((item: any) => React.ReactNode);
     className?: string;
 }
 

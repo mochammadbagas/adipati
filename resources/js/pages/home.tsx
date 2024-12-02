@@ -38,7 +38,7 @@ const items = [
         name: 'Next.js Template',
         url: 'https://irsyad.co/s',
         icon: IconCube,
-        description: 'Explore the next.js templates from web apps to design systems, all here.'
+        description: `Used by some of the world's largest companies, Next.js enables you to create high-quality web applications with the power of React components.`
     },
     {
         name: 'Parsinta',
@@ -59,8 +59,8 @@ const items = [
 export default function Home() {
     return (
         <>
-            <Head title="Welcome to Laravel" />
-            <Header title="Inertia Typescript" />
+            <Head title="Home" />
+            <Header title="Adipati's Home" />
             <Container>
                 <div className="overflow-hidden rounded-lg border lg:border-border border-transparent">
                     <div>

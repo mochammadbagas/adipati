@@ -19,28 +19,9 @@ const navigations = [
         href: '/about'
     },
     {
-        name: 'Github',
-        textValue: 'Github Repository',
-        href: 'https://github.com/irsyadadl/inertia.ts',
-        className: 'justify-between'
-    },
-    {
-        name: 'Components',
-        textValue: 'Just D. Components',
-        href: 'https://getjustd.com',
-        className: 'justify-between'
-    },
-    {
-        name: 'Colors',
-        textValue: 'Just D. Colors',
-        href: 'https://getjustd.com/colors',
-        className: 'justify-between'
-    },
-    {
-        name: 'Templates',
-        textValue: 'Next.js Template',
-        href: 'https://irsyad.co/s',
-        className: 'justify-between'
+        name: 'Article',
+        textValue: 'Article',
+        href: '/article'
     }
 ];
 
@@ -132,6 +113,14 @@ function UserMenu() {
                                 {item.name}
                             </Menu.Checkbox>
                         )}
+                    </Menu.Content>
+                </Menu.Submenu>
+                <Menu.Separator />
+                <Menu.Submenu>
+                    <Menu.Item>Article</Menu.Item>
+                    <Menu.Content>
+                        <Menu.Item href={route('article.table')}>List</Menu.Item>
+                        <Menu.Item href={route('article.create')}>Add Article</Menu.Item>
                     </Menu.Content>
                 </Menu.Submenu>
                 <Menu.Separator />
