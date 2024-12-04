@@ -29,7 +29,7 @@ class SitemapGenerator extends Command
      */
     public function handle()
     {
-        $sitemap = Sitemap::create('https://mochammadbagas.site/')
+        $sitemap = Sitemap::create('https://homespaces.my.id')
         ->add(Url::create('/'))
         ->add(Url::create('/product'))
         ->add(Url::create('/article'));

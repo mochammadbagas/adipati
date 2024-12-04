@@ -2,7 +2,7 @@ import { PagePropsData } from '@/types';
 import { usePage } from '@inertiajs/react';
 import { useTheme } from 'components/theme-provider';
 import { ThemeSwitcher } from 'components/theme-switcher';
-import { IconBrandJustd, IconBrandLaravel, IconChevronDown, IconColorSwatch, IconSettings } from 'justd-icons';
+import { IconBrandLaravel, IconChevronDown, IconSettings } from 'justd-icons';
 import React from 'react';
 import { Selection } from 'react-aria-components';
 import { Avatar, Button, Menu, Navbar, Separator } from 'ui';
@@ -135,7 +135,7 @@ function UserMenu() {
                         <Menu.Item href={route('product.create')}>Add Product</Menu.Item>
                     </Menu.Content>
                 </Menu.Submenu>
-                <Menu.Separator />
+                {/* <Menu.Separator />
                 <Menu.Item target="_blank" href="https://laravel.com" className="justify-between">
                     Documentation
                     <IconBrandLaravel />
@@ -147,7 +147,7 @@ function UserMenu() {
                 <Menu.Item target="_blank" href="https://getjustd.com/colors" className="justify-between">
                     Colors
                     <IconColorSwatch />
-                </Menu.Item>
+                </Menu.Item> */}
                 <Menu.Separator />
                 <Menu.Item routerOptions={{ method: 'post' }} href={route('logout')}>
                     <span>Logout</span>
