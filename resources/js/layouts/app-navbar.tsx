@@ -22,6 +22,11 @@ const navigations = [
         name: 'Article',
         textValue: 'Article',
         href: '/article'
+    },
+    {
+        name: 'Product',
+        textValue: 'Product',
+        href: '/product'
     }
 ];
 
@@ -121,6 +126,13 @@ function UserMenu() {
                     <Menu.Content>
                         <Menu.Item href={route('article.table')}>List</Menu.Item>
                         <Menu.Item href={route('article.create')}>Add Article</Menu.Item>
+                    </Menu.Content>
+                </Menu.Submenu>
+                <Menu.Submenu>
+                    <Menu.Item>Product</Menu.Item>
+                    <Menu.Content>
+                        <Menu.Item href={route('product.table')}>List</Menu.Item>
+                        <Menu.Item href={route('product.create')}>Add Product</Menu.Item>
                     </Menu.Content>
                 </Menu.Submenu>
                 <Menu.Separator />

@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use App\Data\AuthenticatedUserData;
 use App\Models\Article\ArticleCategory;
 use App\Models\Article\ArticleTag;
+use App\Models\Product\ProductCategory;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -36,12 +37,17 @@ class HandleInertiaRequests extends Middleware
         ->select('id', 'name', 'slug')
         ->get();
         
+        $categoriesProduct = ProductCategory::query()
+        ->select('id', 'name', 'slug')
+        ->get();
+        
         return [
             ...parent::share($request),
             'auth' => [
                 'user' => $request->user() ? AuthenticatedUserData::from($request->user()) : null,
             ],
             'categoriesArticle' => $categoriesArticle,
+            'categoriesProduct' => $categoriesProduct,
             'ziggy' => fn () => [
                 'location' => $request->url(),
                 'query' => $request->query(),

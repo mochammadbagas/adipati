@@ -5,6 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 use App\Models\Article\Article;
+use App\Models\Product\Product;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -61,5 +62,10 @@ class User extends Authenticatable
     public function article()
     {
         return $this->hasMany(Article::class);
+    }
+    
+    public function product()
+    {
+        return $this->hasMany(Product::class);
     }
 }

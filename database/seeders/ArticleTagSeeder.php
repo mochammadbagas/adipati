@@ -22,6 +22,6 @@ class ArticleTagSeeder extends Seeder
             ['name' => $name = 'Blade', 'slug' => str($name) ->slug()],
             ['name' => $name = 'React', 'slug' => str($name) ->slug()],
             ['name' => $name = 'Inertia Js', 'slug' => str($name) ->slug()],
-        ])->each(fn($articleCategory) => ArticleTag::create($articleCategory));
+        ])->each(fn($articleTag) => ArticleTag::create($articleTag));
     }
 }
