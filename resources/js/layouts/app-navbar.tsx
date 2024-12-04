@@ -135,19 +135,6 @@ function UserMenu() {
                         <Menu.Item href={route('product.create')}>Add Product</Menu.Item>
                     </Menu.Content>
                 </Menu.Submenu>
-                {/* <Menu.Separator />
-                <Menu.Item target="_blank" href="https://laravel.com" className="justify-between">
-                    Documentation
-                    <IconBrandLaravel />
-                </Menu.Item>
-                <Menu.Item target="_blank" href="https://getjustd.com" className="justify-between">
-                    Components
-                    <IconBrandJustd />
-                </Menu.Item>
-                <Menu.Item target="_blank" href="https://getjustd.com/colors" className="justify-between">
-                    Colors
-                    <IconColorSwatch />
-                </Menu.Item> */}
                 <Menu.Separator />
                 <Menu.Item routerOptions={{ method: 'post' }} href={route('logout')}>
                     <span>Logout</span>
