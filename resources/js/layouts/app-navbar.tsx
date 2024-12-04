@@ -19,13 +19,13 @@ const navigations = [
         href: '/about'
     },
     {
-        name: 'Article',
-        textValue: 'Article',
+        name: 'Articles',
+        textValue: 'Articles',
         href: '/article'
     },
     {
-        name: 'Product',
-        textValue: 'Product',
+        name: 'Products',
+        textValue: 'Products',
         href: '/product'
     }
 ];
